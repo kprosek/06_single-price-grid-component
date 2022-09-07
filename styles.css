@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-grey: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+body {
+  background-color: var(--light-grey);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 90%;
+  max-width: 320px;
+}
+
+section {
+  padding: 1.5em;
+}
+
+h2 {
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+/* section Join our community */
+
+.section-join {
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+.section-join h1 {
+  color: var(--cyan);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.section-join h3 {
+  color: var(--bright-yellow);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1.25rem 0;
+}
+
+.paragraph-regular-grey {
+  color: var(--grayish-blue);
+  font-size: 0.85rem;
+  font-weight: 400;
+
+  line-height: 1.5rem;
+  padding-bottom: 0.7em;
+}
+
+/* section Monthly subscription */
+
+.section-monthly-subscription {
+  background-color: var(--cyan);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0 0.7rem 0;
+}
+
+.price-tag {
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.paragraph-regular-white-opacity {
+  color: white;
+  font-size: 1rem;
+  opacity: 50%;
+  margin-left: 1em;
+}
+
+.paragraph-regular-white {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.btn-sign-up {
+  width: 100%;
+  display: inline-block;
+  padding: 1em;
+
+  background-color: var(--bright-yellow);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* section Why us */
+
+.section-why-us {
+  background-color: var(--cyan);
+  opacity: 75%;
+  border-radius: 0 0 5px 5px;
+}
+
+ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+li {
+  color: white;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+@media (min-width: 670px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    max-width: 635px;
+  }
+
+  .division-two {
+    display: flex;
+    width: 100%;
+  }
+
+  section {
+    padding: 2.4em;
+  }
+
+  .section-join {
+    border-radius: 5px 5px 0 0;
+  }
+
+  .section-join h1 {
+    font-size: 1.55rem;
+  }
+
+  .section-join h3 {
+    font-size: 1.15rem;
+  }
+
+  .paragraph-regular-grey {
+    font-size: 1rem;
+  }
+  .section-monthly-subscription {
+    width: 50%;
+    border-radius: 0 0 0 5px;
+  }
+
+  .section-why-us {
+    width: 50%;
+    border-radius: 0 0 5px 0;
+  }
+}
