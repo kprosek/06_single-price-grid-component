@@ -1,174 +1,161 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
-* {
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --yellow: hsl(71, 73%, 54%);
+  --gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
-  --cyan: hsl(179, 62%, 43%);
-  --bright-yellow: hsl(71, 73%, 54%);
-  --light-grey: hsl(204, 43%, 93%);
-  --grayish-blue: hsl(218, 22%, 67%);
-
-  font-family: "Karla", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
 }
 
 body {
-  background-color: var(--light-grey);
+  display: grid;
+  place-items: center;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  background: var(--gray);
+  font-size: 1rem;
+  font-family: 'Karla', sans-serif;
 }
 
 main {
-  width: 90%;
-  max-width: 320px;
+  max-width: 300px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 section {
-  padding: 1.5em;
+  padding: 1.75em 1.5em;
 }
 
-h2 {
-  color: white;
-  font-size: 1.15rem;
-  font-weight: 700;
-}
-
-/* section Join our community */
-
-.section-join {
+.sec-join {
   background-color: white;
   border-radius: 5px 5px 0 0;
 }
 
-.section-join h1 {
-  color: var(--cyan);
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.section-join h3 {
-  color: var(--bright-yellow);
-  font-size: 1rem;
-  font-weight: 700;
-  margin: 1.25rem 0;
-}
-
-.paragraph-regular-grey {
-  color: var(--grayish-blue);
-  font-size: 0.85rem;
-  font-weight: 400;
-
-  line-height: 1.5rem;
-  padding-bottom: 0.7em;
-}
-
-/* section Monthly subscription */
-
-.section-monthly-subscription {
+.sec-subscription {
   background-color: var(--cyan);
 }
 
-.price {
-  display: flex;
-  align-items: center;
-  margin: 1rem 0 0.7rem 0;
-}
-
-.price-tag {
-  color: white;
-  font-size: 1.75rem;
-  font-weight: 700;
-}
-
-.paragraph-regular-white-opacity {
-  color: white;
-  font-size: 1rem;
-  opacity: 50%;
-  margin-left: 1em;
-}
-
-.paragraph-regular-white {
-  color: white;
-  font-size: 1rem;
-  margin-bottom: 1.75rem;
-}
-
-.btn-sign-up {
-  width: 100%;
-  display: inline-block;
-  padding: 1em;
-
-  background-color: var(--bright-yellow);
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-
-  color: white;
-  font-size: 1rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-/* section Why us */
-
-.section-why-us {
+.sec-why-us {
   background-color: var(--cyan);
-  opacity: 75%;
+  opacity: 0.75;
   border-radius: 0 0 5px 5px;
 }
 
-ul {
-  list-style: none;
-  margin-top: 1rem;
+.div-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.15rem 0 0.65rem;
+
+  max-width: 60%;
 }
 
-li {
+h1 {
+  color: var(--cyan);
+  font-size: 1.15rem;
+}
+
+h2 {
   color: white;
-  font-size: 0.9rem;
-  line-height: 1.2rem;
+  font-size: 1.05rem;
 }
 
-@media (min-width: 670px) {
+.paragraph-yellow {
+  color: var(--yellow);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 1.15rem 0;
+}
+
+.paragraph-gray {
+  color: var(--grayish-blue);
+  font-size: 0.83rem;
+  line-height: 1.5rem;
+}
+
+.paragraph-white {
+  color: white;
+}
+
+.price {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.div-price .paragraph-white {
+  opacity: 0.65;
+}
+
+.sec-subscription button {
+  display: inline-block;
+  width: 100%;
+  margin-top: 1.75rem;
+  font: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  background-color: var(--yellow);
+  color: white;
+  padding: 0.85rem;
+  border-radius: 5px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sec-why-us ul {
+  margin-top: 1.15rem;
+
+  list-style: none;
+  line-height: 1.25rem;
+  color: white;
+  font-size: 0.83rem;
+  opacity: 0.9;
+}
+
+@media (min-width: 600px) {
   main {
     display: flex;
     flex-direction: column;
-    max-width: 635px;
+
+    max-width: 600px;
   }
 
-  .division-two {
+  .main-bottom {
     display: flex;
-    width: 100%;
   }
 
   section {
-    padding: 2.4em;
+    padding: 2.25em 2em;
   }
 
-  .section-join {
-    border-radius: 5px 5px 0 0;
-  }
-
-  .section-join h1 {
-    font-size: 1.55rem;
-  }
-
-  .section-join h3 {
-    font-size: 1.15rem;
-  }
-
-  .paragraph-regular-grey {
-    font-size: 1rem;
-  }
-  .section-monthly-subscription {
+  .sec-subscription {
     width: 50%;
     border-radius: 0 0 0 5px;
   }
 
-  .section-why-us {
+  .sec-why-us {
     width: 50%;
     border-radius: 0 0 5px 0;
+  }
+
+  h1 {
+    font-size: 1.45rem;
+  }
+
+  .paragraph-yellow {
+    font-size: 1.05rem;
+  }
+
+  .paragraph-gray {
+    font-size: 0.94rem;
   }
 }
